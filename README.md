@@ -35,16 +35,10 @@
 ## Installation Preview:
 ```mermaid
 graph LR
-    A[📱 Open Termux] -->|Copy| B[📋 Copy Command]
-    B -->|Paste| C[⚡ Paste & Run]
-    C -->|Auto| D[🔄 Auto-Install]
-    D -->|Done| E[✅ Ready to Use!]
-    
-    style A fill:#ff6b6b,stroke:#c92a2a,stroke-width:2px,color:#fff
-    style B fill:#4ecdc4,stroke:#0b5e5e,stroke-width:2px,color:#fff
-    style C fill:#45b7d1,stroke:#1e3a5f,stroke-width:2px,color:#fff
-    style D fill:#f9ca24,stroke:#d4a000,stroke-width:2px,color:#000
-    style E fill:#6abf69,stroke:#2d6a2d,stroke-width:2px,color:#fff
+    A[📱 Open Termux] --> B[📋 Copy Command]
+    B --> C[⚡ Paste & Run]
+    C --> D[🔄 Auto-Install]
+    D --> E[✅ Ready to Use!]
 ```
 
 # 🚀 **One-Line Installation**
