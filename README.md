@@ -1,3 +1,5 @@
+<img width="1254" height="1254" alt="hermes on phone" src="https://github.com/user-attachments/assets/aad4cce5-aba6-498e-9179-30b401fa4ccb" />
+
 <div align="center">
 
 # 🤖 Hermes Agent for Android (Termux)
@@ -13,7 +15,6 @@
 </div>
 [Installation](#-one-line-installation)
 
-<img width="1254" height="1254" alt="hermes on phone" src="https://github.com/user-attachments/assets/aad4cce5-aba6-498e-9179-30b401fa4ccb" />
 ---
 
 ## ✨ What is Hermes Agent?
