@@ -71,8 +71,6 @@ chmod +x hermes_install.sh
 
 ## ⚙️ System Requirements
 
-<div align="center">
-
 | Requirement | Minimum | Recommended |
 |:------------|:-------:|-------------:|
 | **Android Version** | 11  |  13 or 14 |
@@ -81,12 +79,8 @@ chmod +x hermes_install.sh
 | **Internet** | Required | Fast connection |
 | **Termux** | Latest | Latest from F-Droid |
 
-</div>
-
 
 ## 🌍 Why Run Hermes on Android?
-
-<div align="center">
 
 | Benefit |  Description |
 |:------------|:-------------:|
