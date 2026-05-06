@@ -89,8 +89,8 @@ chmod +x hermes_install.sh
 | **💰 Cost-effective** | No server hosting fees |
 | **⚡ Low latency** | Direct execution |
 | **🔄 Always available** | Works offline (with local models) |
-</div>
 
+<div align="center">
 ## **⭐ If this helped you, give it a star! ⭐**
-
+</div>
 
