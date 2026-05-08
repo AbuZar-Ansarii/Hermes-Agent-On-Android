@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤖 Hermes Agent for Android (Termux)
+# ☤ Hermes Agent for Android (Termux)
 
 ### *Run a Self-Evolving AI Assistant on Your Phone*
 
