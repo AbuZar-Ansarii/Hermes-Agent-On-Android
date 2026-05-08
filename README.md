@@ -117,7 +117,7 @@ Compatible with 200+ AI models including:
 pkg install ollama
 ollama serve
 ```
-*Pull & Run Models* 
+#### Pull & Run Models
 ```
 ollama run gemma4:31b-cloud
 ```
