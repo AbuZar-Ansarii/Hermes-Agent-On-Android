@@ -62,6 +62,12 @@ chmod +x hermes_install.sh
 ./hermes_install.sh
 ```
 
+## 🤖 Start Agent
+Run this for setting it up
+```
+hermes setup
+```
+
 ## ⚙️ System Requirements
 
 | Requirement | Minimum | Recommended |
@@ -82,6 +88,49 @@ chmod +x hermes_install.sh
 | **💰 Cost-effective** | No server hosting fees |
 | **⚡ Low latency** | Direct execution |
 | **🔄 Always available** | Works offline (with local models) |
+
+
+
+## 🎛️ AI Model Freedom
+Compatible with 200+ AI models including:
+
+• OpenAI (GPT-4, GPT-3.5)
+
+• Anthropic (Claude)
+
+• Google (Gemini)
+
+• DeepSeek
+
+• Alibaba (Qwen)
+
+• Zhipu (GLM)
+
+• Local models via Ollama
+
+## 🦙 Running Local Models with [Ollama](https://ollama.com)
+
+### 📋 Installation
+
+#### Install Ollama on Termux:
+```
+pkg install ollama
+ollama serve
+```
+*Pull & Run Models* 
+```
+ollama run gemma4:31b-cloud
+```
+
+## 🙏 Acknowledgments
+• Nous Research - For creating the amazing Hermes Agent
+
+• Termux Team - For making Android development possible
+
+• Open Source Community - For the countless tools and libraries
+
+• You - For using and supporting this project! ❤️
+
 
 <div align="center">
     
