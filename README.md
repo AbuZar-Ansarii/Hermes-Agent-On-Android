@@ -13,8 +13,6 @@
 
 **Transform your Android device into a powerful, learning AI assistant**
 </div>
-[Installation](#-one-line-installation)
-
 ---
 
 ## ✨ What is Hermes Agent?
