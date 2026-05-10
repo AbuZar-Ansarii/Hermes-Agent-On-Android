@@ -5,6 +5,9 @@
 
 set -e
 
+# Prevent interactive prompts from breaking the script
+export DEBIAN_FRONTEND=noninteractive
+
 # Colors for output
 CYN='\033[0;36m'
 GRN='\033[0;32m'
@@ -14,19 +17,15 @@ echo -e "${CYN}=====================================================${RST}"
 echo -e "${GRN}                THEVOIDKERNEL"
 echo -e "${CYN}=====================================================${RST}"
 
-echo -e "${CYN}=====================================================${RST}"
-echo -e "${GRN}        🚀 Installing Hermes Agent on Termux..."
-echo -e "${CYN}=====================================================${RST}"
+# 1. Update and install system dependencies with "No Questions Asked" flags
+echo "📦 Updating system packages..."
+pkg update -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
+pkg upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
 
-echo "📦 Repository: https://github.com/AbuZar-Ansarii/Hermes-Agent-On-Android"
+# Install core dependencies including python-psutil to avoid build errors
+pkg install -y python python-psutil git clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
 
-# 1. Update and install system dependencies
-# We add python-psutil here to avoid the "platform android is not supported" pip error
-pkg update && pkg upgrade -y
-pkg install -y git python python-psutil clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
-
-# 2. Clone repository
-# Using a fresh clone to ensure no local conflicts
+# 2. Clone or Update repository
 if [ -d "hermes-agent" ]; then
     echo "Directory hermes-agent already exists. Updating..."
     cd hermes-agent && git pull && cd ..
@@ -36,31 +35,22 @@ fi
 
 cd hermes-agent
 
-# 3. Setup Python virtual environment with SYSTEM SITE PACKAGES
-# This allows the venv to use the 'psutil' we installed via pkg
+# 3. Setup Python virtual environment with system access
 echo "Setting up virtual environment..."
-rm -rf venv # Clean old venv if exists
+rm -rf venv
 python -m venv venv --system-site-packages
 source venv/bin/activate
 
-# 4. Set Android environment variables
+# 4. Set Environment
 export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
-
-# 5. Upgrade pip and install
-echo "Installing Hermes Agent dependencies..."
 python -m pip install --upgrade pip setuptools wheel
 
-# We use --no-build-isolation to prevent it from trying to compile psutil again
+# 5. Install Hermes with Termux support
+echo "Installing Hermes Agent..."
 python -m pip install -e '.[termux]' -c constraints-termux.txt
 
-# 6. Create global symlink
+# 6. Global Symlink
 ln -sf "$PWD/venv/bin/hermes" "$PREFIX/bin/hermes"
 
-echo -e "${GRN}✅ Hermes Agent installed successfully!${RST}"
-echo "-----------------------------------------------------"
-echo "🔥 Run 'hermes setup' to configure your providers (Ollama/Gemini)"
-echo "🌐 Run 'hermes gateway' to deploy your Telegram bot"
-echo "📖 Type 'hermes --help' for more options"
-echo "-----------------------------------------------------"
-echo "💡 Need help? Visit: https://github.com/AbuZar-Ansarii/Hermes-Agent-On-Android"
-echo ""
+echo -e "${GRN}✅ Installation Complete!${RST}"
+echo "🔥 Run 'hermes setup' to start."
