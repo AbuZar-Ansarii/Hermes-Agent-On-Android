@@ -75,11 +75,11 @@ proot-distro login ubuntu
 cd hermes-agent
 source venv/bin/activate
 ```
-Run this for setting it up
+Run for setting it up
 ```
 hermes setup
 ```
-Run this for using
+Run for using it
 ```
 hermes
 ```
