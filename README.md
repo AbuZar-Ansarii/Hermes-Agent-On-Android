@@ -49,6 +49,7 @@ graph LR
 ```
 curl -fsSL https://raw.githubusercontent.com/AbuZar-Ansarii/All-Agents/main/hermes_install.sh | bash
 ```
+**This may take some time so please wait for it to finish**
 ## Old
 
 ```bash
