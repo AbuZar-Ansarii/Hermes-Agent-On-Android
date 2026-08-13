@@ -54,6 +54,10 @@ curl -fsSL https://raw.githubusercontent.com/AbuZar-Ansarii/All-Agents/main/herm
 ## Hermes agent start (if you close the terminal)
 ```
 proot-distro login ubuntu
+```
+
+## Launch Hermes Agent 
+```
 hermes
 ```
 
