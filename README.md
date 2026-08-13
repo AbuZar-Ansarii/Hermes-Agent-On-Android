@@ -43,12 +43,19 @@ graph LR
 # 🚀 **One-Line Installation**
 
 ### **Copy and paste this command in Termux:**
+## *New Command*
+#### Error Free & Updated (Recommended)
+
+```
+curl -fsSL https://raw.githubusercontent.com/AbuZar-Ansarii/All-Agents/main/hermes_install.sh | bash
+```
+
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/AbuZar-Ansarii/Hermes-Agent-On-Android/main/nous_agent.sh | bash
 ```
 
-## 🛠️ Manual Installation (Recommended)
+## 🛠️ Manual Installation
 Prefer to do it yourself? Here's the step-by-step:
 ```
 pkg install git
