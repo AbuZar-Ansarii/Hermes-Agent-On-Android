@@ -50,6 +50,31 @@ graph LR
 curl -fsSL https://raw.githubusercontent.com/AbuZar-Ansarii/All-Agents/main/hermes_install.sh | bash
 ```
 **This may take some time so please wait for it to finish**
+
+## Hermes agent start (if you close the terminal)
+```
+proot-distro login Ubuntu
+hermes
+```
+
+## 🛠️ Hermes Agent Command Reference
+
+| Command / Category | Syntax / Example | Description |
+| :--- | :--- | :--- |
+| **Start / Run** | `hermes` | Launch the Hermes Agent interactive interface. |
+| **Setup & Configuration** | `hermes setup` | Run the initial interactive setup wizard to configure API keys, models, and dependencies. |
+| **Gateway / Service** | `hermes gateway` | Start the Hermes Gateway service to listen for incoming connections, webhooks, or API requests. |
+| **Direct Prompt** | `hermes "Analyze logs in ./src"` | Run Hermes directly with a specific instruction without entering interactive mode. |
+| **File / Context Path** | `hermes -f ./app.js "Refactor this"` | Pass explicit file contexts or attachments into the session. |
+| **Model Selection** | `hermes --model <model_name>` | Specify a custom or non-default model for the session. |
+| **Interactive Commands** | `/help` | Display the list of available in-session commands and options. |
+| **Clear Session** | `/clear` or `/reset` | Clear current context history and start fresh within the active session. |
+| **Execute Shell** | `! <command>` *(e.g., `! ls -la`)* | Run a system shell command directly inside the Hermes terminal interface. |
+| **Save Output** | `hermes "..." -o output.md` | Execute a task and save the agent's output directly to a file. |
+| **Exit** | `/exit` or `Ctrl + C` | Safely terminate the active Hermes session. |
+
+
+
 ## Old
 
 ```bash
